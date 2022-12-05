@@ -1,7 +1,9 @@
 import Head from 'next/head';
+import { useState } from 'react';
 import styles from '../styles/Home.module.css';
 
 export default function Home() {
+  const [text, setText] = useState();
   return (
     <div className={styles.container}>
       <Head>
@@ -80,6 +82,42 @@ export default function Home() {
             />
             <h3>Upload File &rarr;</h3>
             <p>To download as TXT</p>
+          </div>
+          <div
+            className={styles.card}
+            onClick={() => {
+              document.getElementById('text').click();
+            }}
+          >
+            
+            <h3>Create File &rarr;</h3>
+            <p>Create a File with Content: {text}</p>
+            <input
+              id="text"
+              type="text"
+              className={styles.card}
+              style={{ padding: '10px', display: 'inline-block' }}
+              onChange={(e) => {
+                setText(e.target.value)
+              }}
+            />
+            <button 
+              className={styles.card}
+              style={{ padding: '10px', display: 'inline-block' }} 
+              onClick={ () => {
+                let file = new Blob([text]);
+                const url = window.URL.createObjectURL(file);
+                const a = document.createElement('a');
+                a.style.display = 'none';
+                a.href = url;
+                // the filename you want
+                a.download = 'output';
+                document.body.appendChild(a);
+                a.click();
+                window.URL.revokeObjectURL(url);
+              }}>
+                Create File
+            </button>
           </div>
         </div>
       </main>
