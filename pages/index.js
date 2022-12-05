@@ -71,7 +71,7 @@ export default function Home() {
                   a.style.display = 'none';
                   a.href = url;
                   // the filename you want
-                  a.download = 'test';
+                  a.download = 'output';
                   document.body.appendChild(a);
                   a.click();
                   window.URL.revokeObjectURL(url);
