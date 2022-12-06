@@ -4,6 +4,7 @@ import styles from '../styles/Home.module.css';
 
 export default function Home() {
   const [text, setText] = useState();
+  // const [format, setFormat] = useState('png');
   return (
     <div className={styles.container}>
       <Head>
@@ -18,15 +19,6 @@ export default function Home() {
         </p>
 
         <div className={styles.grid}>
-          <a
-            href="https://portal.office.com/"
-            target="_blank"
-            className={styles.card}
-          >
-            <h3>Office &rarr;</h3>
-            <p>Click here for office.</p>
-          </a>
-
           <div
             className={styles.card}
             onClick={() => {
@@ -43,7 +35,14 @@ export default function Home() {
             <h3>Copy Email &rarr;</h3>
             <p>Copy Email Address to clipboard!</p>
           </div>
-
+          <a
+            href="https://portal.office.com/"
+            target="_blank"
+            className={styles.card}
+          >
+            <h3>Office &rarr;</h3>
+            <p>Click here for office.</p>
+          </a>
           <a
             href="https://sms.eursc.eu/"
             target="_blank"
@@ -73,9 +72,12 @@ export default function Home() {
                   a.style.display = 'none';
                   a.href = url;
                   // the filename you want
-                  a.download = 'output';
+                  a.download = 'output.txt';
                   document.body.appendChild(a);
                   a.click();
+                  alert(
+                    'Your file is downloading. Make sure not to save using NOTEPAD. Use NP++'
+                  );
                   window.URL.revokeObjectURL(url);
                 });
               }}
@@ -83,13 +85,13 @@ export default function Home() {
             <h3>Upload File &rarr;</h3>
             <p>To download as TXT</p>
           </div>
+
           <div
             className={styles.card}
             onClick={() => {
               document.getElementById('text').click();
             }}
           >
-            
             <h3>Create File &rarr;</h3>
             <p>Create a File with Content: {text}</p>
             <input
@@ -98,13 +100,13 @@ export default function Home() {
               className={styles.card}
               style={{ padding: '10px', display: 'inline-block' }}
               onChange={(e) => {
-                setText(e.target.value)
+                setText(e.target.value);
               }}
             />
-            <button 
+            <button
               className={styles.card}
-              style={{ padding: '10px', display: 'inline-block' }} 
-              onClick={ () => {
+              style={{ padding: '10px', display: 'inline-block' }}
+              onClick={() => {
                 let file = new Blob([text]);
                 const url = window.URL.createObjectURL(file);
                 const a = document.createElement('a');
@@ -115,8 +117,9 @@ export default function Home() {
                 document.body.appendChild(a);
                 a.click();
                 window.URL.revokeObjectURL(url);
-              }}>
-                Create File
+              }}
+            >
+              Create File
             </button>
           </div>
         </div>
