@@ -51,6 +51,45 @@ export default function Home() {
             <h3>SMS &rarr;</h3>
             <p>Open sms.</p>
           </a>
+          <a
+            href="https://scratch.mit.edu/"
+            onClick={(e) => {
+              e.preventDefault();
+              navigator.clipboard.writeText('WilliamPlays0402');
+              window.open('https://scratch.mit.edu/', '_blank');
+            }}
+            target="_blank"
+            className={styles.card}
+          >
+            <h3>Scratch &rarr;</h3>
+            <p>Open SCRATCH (sets username to clipboard).</p>
+          </a>
+          <a
+            href="https://stackblitz.com/"
+            onClick={(e) => {
+              e.preventDefault();
+              navigator.clipboard.writeText('me@williamplays0402.com');
+              window.open('https://stackblitz.com/', '_blank');
+            }}
+            target="_blank"
+            className={styles.card}
+          >
+            <h3>Stackblitz &rarr;</h3>
+            <p>Open Stackblitz (sets email to clipboard).</p>
+          </a>
+          <a
+            href="https://github.com/login/"
+            onClick={(e) => {
+              e.preventDefault();
+              navigator.clipboard.writeText('me@williamplays0402.com');
+              window.open('https://github.com/login/', '_blank');
+            }}
+            target="_blank"
+            className={styles.card}
+          >
+            <h3>Github &rarr;</h3>
+            <p>Open Github (sets email to clipboard).</p>
+          </a>
 
           <div
             className={styles.card}
