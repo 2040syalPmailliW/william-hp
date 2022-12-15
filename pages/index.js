@@ -32,7 +32,7 @@ export default function Home() {
               );
             }}
           >
-            <h3>Copy Email &rarr;</h3>
+            <h3>Copy School Email &rarr;</h3>
             <p>Copy Email Address to clipboard!</p>
           </div>
           <a
@@ -50,6 +50,30 @@ export default function Home() {
           >
             <h3>SMS &rarr;</h3>
             <p>Open sms.</p>
+          </a>
+          <a
+            href="https://williamplays0402.com/"
+            onClick={(e) => {
+              e.preventDefault();
+              navigator.clipboard.writeText('WilliamPlays0402');
+              let w = window.open(
+                'https://williamplays0402.com/',
+                '_blank',
+                'popup'
+              );
+              // setTimeout(() => {
+              window.focus();
+              w.close();
+              // }, 100);
+            }}
+            target="_blank"
+            className={styles.card}
+          >
+            <h3>Allow access to clipboard &rarr;</h3>
+            <p>
+              Opens homepage and tries to write to clipboard. Then closes the
+              tab.
+            </p>
           </a>
           <a
             href="https://scratch.mit.edu/"
