@@ -19,38 +19,6 @@ export default function Home() {
         </p>
 
         <div className={styles.grid}>
-          <div
-            className={styles.card}
-            onClick={() => {
-              navigator.clipboard.writeText('peltonvi@student.eursc.eu').then(
-                () => {
-                  console.log('success');
-                },
-                (e) => {
-                  console.error(e);
-                }
-              );
-            }}
-          >
-            <h3>Copy School Email &rarr;</h3>
-            <p>Copy Email Address to clipboard!</p>
-          </div>
-          <a
-            href="https://portal.office.com/"
-            target="_blank"
-            className={styles.card}
-          >
-            <h3>Office &rarr;</h3>
-            <p>Click here for office.</p>
-          </a>
-          <a
-            href="https://sms.eursc.eu/"
-            target="_blank"
-            className={styles.card}
-          >
-            <h3>SMS &rarr;</h3>
-            <p>Open sms.</p>
-          </a>
           <a
             href="https://williamplays0402.com/"
             onClick={(e) => {
@@ -74,6 +42,48 @@ export default function Home() {
               Opens homepage and tries to write to clipboard. Then closes the
               tab.
             </p>
+          </a>
+          {/* <div
+            className={styles.card}
+            onClick={() => {
+              navigator.clipboard.writeText('peltonvi@student.eursc.eu').then(
+                () => {
+                  console.log('success');
+                },
+                (e) => {
+                  console.error(e);
+                }
+              );
+            }}
+          >
+            <h3>Copy School Email &rarr;</h3>
+            <p>Copy Email Address to clipboard!</p>
+          </div> */}
+          <a
+            href="https://portal.office.com/"
+            target="_blank"
+            onClick={(e) => {
+              e.preventDefault();
+              navigator.clipboard.writeText('peltonvi@student.eursc.eu');
+              let w = window.open('https://portal.office.com/', '_blank');
+            }}
+            className={styles.card}
+          >
+            <h3>Office &rarr;</h3>
+            <p>Click here for office.</p>
+          </a>
+          <a
+            href="https://sms.eursc.eu/"
+            target="_blank"
+            onClick={(e) => {
+              e.preventDefault();
+              navigator.clipboard.writeText('peltonvi@student.eursc.eu');
+              let w = window.open('https://sms.eursc.eu/', '_blank');
+            }}
+            className={styles.card}
+          >
+            <h3>SMS &rarr;</h3>
+            <p>Open sms.</p>
           </a>
           <a
             href="https://scratch.mit.edu/"
