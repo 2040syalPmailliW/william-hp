@@ -73,6 +73,22 @@ export default function Home() {
             <p>Click here for office.</p>
           </a>
           <a
+            href="https://williamplays0402.github.io/homework-tracker/"
+            onClick={(e) => {
+              e.preventDefault();
+              navigator.clipboard.writeText('peltonen.vili@gmail.com');
+              window.open(
+                'https://williamplays0402.github.io/homework-tracker/',
+                '_blank'
+              );
+            }}
+            target="_blank"
+            className={styles.card}
+          >
+            <h3>Scratch &rarr;</h3>
+            <p>Open SCRATCH (sets username to clipboard).</p>
+          </a>
+          <a
             href="https://sms.eursc.eu/"
             target="_blank"
             onClick={(e) => {
