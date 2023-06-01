@@ -85,8 +85,8 @@ export default function Home() {
             target="_blank"
             className={styles.card}
           >
-            <h3>Scratch &rarr;</h3>
-            <p>Open SCRATCH (sets username to clipboard).</p>
+            <h3>Homework &rarr;</h3>
+            <p>Open Homework tracker (sets username to clipboard).</p>
           </a>
           <a
             href="https://sms.eursc.eu/"
