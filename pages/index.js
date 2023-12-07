@@ -140,7 +140,34 @@ export default function Home() {
             <h3>Github &rarr;</h3>
             <p>Open Github (sets email to clipboard).</p>
           </a>
-
+          <a
+            href="https://figma.com/login/"
+            onClick={(e) => {
+              e.preventDefault();
+              navigator.clipboard.writeText('me@williamplays0402.com');
+              window.open('https://figma.com/login/', '_blank');
+            }}
+            target="_blank"
+            className={styles.card}
+          >
+            <h3>Figma &rarr;</h3>
+            <p>Open Figma (sets email to clipboard).</p>
+          </a>
+          <a
+            href="https://monkeytype.com/"
+            onClick={(e) => {
+              e.preventDefault();
+              navigator.clipboard.writeText(
+                '{"theme":"rainbow_trail","themeLight":"serika","themeDark":"serika_dark","autoSwitchTheme":false,"customTheme":false,"customThemeColors":["#323437","#e2b714","#e2b714","#646669","#2c2e31","#d1d0c5","#ca4754","#7e2a33","#ca4754","#7e2a33"],"favThemes":[],"showKeyTips":true,"showLiveWpm":true,"showTimerProgress":true,"smoothCaret":"medium","quickRestart":"tab","punctuation":false,"numbers":false,"words":10,"time":30,"mode":"words","quoteLength":[1],"language":"english","fontSize":4,"freedomMode":false,"difficulty":"normal","blindMode":false,"quickEnd":true,"caretStyle":"default","paceCaretStyle":"default","flipTestColors":false,"layout":"qwertz","funbox":"none","confidenceMode":"off","indicateTypos":"below","timerStyle":"mini","colorfulMode":false,"randomTheme":"off","timerColor":"main","timerOpacity":"1","stopOnError":"off","showAllLines":false,"keymapMode":"react","keymapStyle":"staggered","keymapLegendStyle":"dynamic","keymapLayout":"overrideSync","keymapShowTopRow":"always","fontFamily":"Roboto_Mono","smoothLineScroll":true,"alwaysShowDecimalPlaces":false,"alwaysShowWordsHistory":true,"singleListCommandLine":"manual","capsLockWarning":true,"playSoundOnError":"1","playSoundOnClick":"4","soundVolume":"1.0","startGraphsAtZero":true,"showOutOfFocusWarning":true,"paceCaret":"off","paceCaretCustomSpeed":100,"repeatedPace":true,"pageWidth":"125","accountChart":["on","on","on","on"],"minWpm":"off","minWpmCustomSpeed":100,"highlightMode":"letter","typingSpeedUnit":"wpm","ads":"off","hideExtraLetters":false,"strictSpace":false,"minAcc":"off","minAccCustom":90,"showLiveAcc":true,"showLiveBurst":true,"monkey":false,"repeatQuotes":"typing","oppositeShiftMode":"off","customBackground":"","customBackgroundSize":"cover","customBackgroundFilter":[0,1,1,1,1],"customLayoutfluid":"qwerty#dvorak#colemak","monkeyPowerLevel":"off","minBurst":"off","minBurstCustomSpeed":100,"burstHeatmap":false,"britishEnglish":true,"lazyMode":false,"showAverage":"both","tapeMode":"letter"}'
+              );
+              window.open('https://monkeytype.com/', '_blank');
+            }}
+            target="_blank"
+            className={styles.card}
+          >
+            <h3>Monkeytype &rarr;</h3>
+            <p>Open Monkeytype (sets settings to clipboard).</p>
+          </a>
           <div
             className={styles.card}
             onClick={() => {
