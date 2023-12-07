@@ -141,11 +141,11 @@ export default function Home() {
             <p>Open Github (sets email to clipboard).</p>
           </a>
           <a
-            href="https://figma.com/login/"
+            href="https://www.figma.com/login/"
             onClick={(e) => {
               e.preventDefault();
               navigator.clipboard.writeText('me@williamplays0402.com');
-              window.open('https://figma.com/login/', '_blank');
+              window.open('https://www.figma.com/login', '_blank');
             }}
             target="_blank"
             className={styles.card}
