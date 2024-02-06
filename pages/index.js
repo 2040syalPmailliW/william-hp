@@ -168,6 +168,22 @@ export default function Home() {
             <h3>Monkeytype &rarr;</h3>
             <p>Open Monkeytype (sets settings to clipboard).</p>
           </a>
+          <a
+            href="https://www.google.com/login/"
+            onClick={(e) => {
+              e.preventDefault();
+              navigator.clipboard.writeText('schoolviljamipeltonen@gmail.com');
+              window.open(
+                'https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fwww.google.com%2F&ec=GAZAmgQ&hl=de&ifkv=ASKXGp3IkyOgTgaNQlapFwwyo9Scc_AItSuRxKKIeNWKExHUCX8fYETa95pEf-4fvtfYB23i766hlg&passive=true&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S1611431571%3A1707221323897956&theme=glif',
+                '_blank'
+              );
+            }}
+            target="_blank"
+            className={styles.card}
+          >
+            <h3>Google &rarr;</h3>
+            <p>Open Google (sets email to clipboard).</p>
+          </a>
           <div
             className={styles.card}
             onClick={() => {
