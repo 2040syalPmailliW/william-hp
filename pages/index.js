@@ -184,6 +184,19 @@ export default function Home() {
             <h3>Google &rarr;</h3>
             <p>Open Google (sets email to clipboard).</p>
           </a>
+          <a
+            href="https://www.notion.so/login/"
+            onClick={(e) => {
+              e.preventDefault();
+              navigator.clipboard.writeText('schoolviljamipeltonen@gmail.com');
+              window.open('https://www.notion.so/login/', '_blank');
+            }}
+            target="_blank"
+            className={styles.card}
+          >
+            <h3>Notion &rarr;</h3>
+            <p>Open Notion (sets email to clipboard).</p>
+          </a>
         </div>
       </main>
 
