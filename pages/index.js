@@ -197,6 +197,14 @@ export default function Home() {
             <h3>Notion &rarr;</h3>
             <p>Open Notion (sets email to clipboard).</p>
           </a>
+          <a
+            href="https://www.geogebra.org/calculator"
+            target="_blank"
+            className={styles.card}
+          >
+            <h3>Geogebra &rarr;</h3>
+            <p>Open Geogebra.</p>
+          </a>
         </div>
       </main>
 
