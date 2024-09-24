@@ -102,6 +102,22 @@ export default function Home() {
             <p>Open sms.</p>
           </a>
           <a
+            href="https://www.geogebra.org/calculator"
+            target="_blank"
+            className={styles.card}
+          >
+            <h3>Geogebra &rarr;</h3>
+            <p>Open Geogebra.</p>
+          </a>
+          <a
+            href="https://numworks.com/simulator"
+            target="_blank"
+            className={styles.card}
+          >
+            <h3>Numworks &rarr;</h3>
+            <p>Open Numworks.</p>
+          </a>
+          <a
             href="https://scratch.mit.edu/"
             onClick={(e) => {
               e.preventDefault();
@@ -196,14 +212,6 @@ export default function Home() {
           >
             <h3>Notion &rarr;</h3>
             <p>Open Notion (sets email to clipboard).</p>
-          </a>
-          <a
-            href="https://www.geogebra.org/calculator"
-            target="_blank"
-            className={styles.card}
-          >
-            <h3>Geogebra &rarr;</h3>
-            <p>Open Geogebra.</p>
           </a>
         </div>
       </main>
