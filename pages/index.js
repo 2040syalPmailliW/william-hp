@@ -102,7 +102,7 @@ export default function Home() {
             <p>Open sms.</p>
           </a>
           <a
-            href="https://www.geogebra.org/calculator"
+            href="https://www.geogebra.org/calculator?lang=en"
             target="_blank"
             className={styles.card}
           >
